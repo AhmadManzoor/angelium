@@ -1,0 +1,9 @@
+{% if history %}
+    <ul>
+    {% for data in history %}
+        <li><a href="{% url 'blackjack:detail' data.id %}" >{{ data.game_name }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No data available.</p>
+{% endif %}

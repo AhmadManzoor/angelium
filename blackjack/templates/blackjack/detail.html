@@ -1,0 +1,17 @@
+<h1>{{ data.game_name }}</h1>
+{% if error_message % }<p><strong>{{ error_message }}</strong></p> {% endif %}
+<form action="{% url blackjack:choice data.id %}" method="POST" >
+	{% crf_token %}
+	{% for choice in data %}
+	<input type="radio" name="choice" id="choice{{ forloop.counter }}" value="{{choice.id">
+<label for="choice {{forloop.counter">{{choice.choice}}</label><br>
+{% endfor %}
+<input type="submit" value ="Choice">
+</form>
+<!-- <ul>
+{% for choice in data.all %}
+    <li>{{ data.id }}</li>
+        <li>{{ data.time }}</li>
+            <li>{{ data.choice }}</li>
+{% endfor %}
+	</ul> -->
