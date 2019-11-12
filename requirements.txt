@@ -2,3 +2,4 @@ django
 djangorestframework
 chatterbot
 nltk
+chatterbot_corpus
